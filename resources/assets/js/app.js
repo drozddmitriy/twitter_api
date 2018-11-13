@@ -9,6 +9,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+//Vue.config.productionTip = false;
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -16,6 +22,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('timeline', require('./components/Timeline.vue'));
+Vue.component('post-tweet', require('./components/PostTweet.vue'));
 
 const app = new Vue({
     el: '#app'
