@@ -19,7 +19,6 @@
         ],
         methods: {
             post () {
-
                 this.$http.post('/tweets', {body: this.body}).then((response) => {
                     this.tweets.unshift(response.body);
                     this.body = null
